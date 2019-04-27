@@ -1,3 +1,21 @@
 body{
-	background-image: url(img/harry.jpg);
+ 	background-color: #cccccc;
+	background-image: url("https://images.ctfassets.net/bxd3o8b291gf/3SQ3X2km8wkQIsQWa02yOY/25f258f21bdbe5f552a4419bb775f4f0/HarryPotter_WB_F4_HarryPotterMidshot_Promo_080615_Port.jpg?w=1200");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
+	margin: 0;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+.dolar {
+    font-size: 70px;
+    color:#542B72;
+    font-family: tahoma;
 }
