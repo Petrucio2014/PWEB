@@ -152,7 +152,7 @@
 		private int $id_cidade;
 		private string $bairro;
 
-		function bairro($id, $id_cidade, $bairro)
+		function bairro(int $id,int $id_cidade,string $bairro)
 		{
 			$this->id = $id;
 			$this->id_cidade = $id_cidade;
@@ -165,7 +165,7 @@
 		private int $id_estado;
 		private string $cidade;
 
-		function cidade($id, $id_estado, $cidade){
+		function cidade(int $id,int $id_estado,string $cidade){
 			$this->id = $id;
 			$this->id_estado = $id_estado;
 			$this->cidade = $cidade;
@@ -173,6 +173,15 @@
 		}
 	}
 
+	class estado{
+		private int $id;
+		private string $estado;
+
+		function estado(int $id,string $estado){
+			$this->id = $id;
+			$this->estado = $estado;
+		}
+	}
 
 
 
