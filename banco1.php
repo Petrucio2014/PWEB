@@ -50,7 +50,16 @@
 	}
 
 	class categoria{
-		private int id;
-		private string categoria;
+		private int $id;
+		private string $categoria;
+
+		function categoria($id,$categoria){
+			$this->id = $id;
+			$this->categoria = $categoria;
+		}
+	}
+
+	class produto{
+		
 	}
 ?>

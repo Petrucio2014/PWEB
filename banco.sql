@@ -3,33 +3,26 @@ create database alencar;
 use alencar;
 
 create table estado(
-	id int not null,
+	id int not null auto_increment,
 	primary key(id),
 	estado varchar(45)
 );
 create table cidade(
-	id int not null primary key,
+	id int not null primary key auto_increment,
     id_estado int,
     foreign key(id) references estado (id),
     cidade varchar(45)    
 );
 create table bairro(
-	id int not null primary key,
+	id int not null primary key auto_increment,
     id_cidade int,
     foreign key(id) references cidade (id),
     bairro varchar(45)    
 );
 create table endereco(
-	id int not null primary key,
+	id int not null primary key auto_increment,
     id_bairro int,
     foreign key (id) references bairro (id)
-);
-create table administrador(
-	id int not null primary key,
-    id_endereco int,
-    foreign key (id_endereco) references endereco (id),
-    nome varchar(45),
-    senha varchar(45)
 );
 create table cliente(
 	cpf varchar(45) not null primary key,
@@ -41,28 +34,28 @@ create table cliente(
     senha varchar(45)
 );
 create table categoria(
-	id int not null primary key,
-    nome varchar(45)
+	id int not null primary key auto_increment,
+    categoria varchar(45)
 );
 create table produto(
-	id int not null primary key,
+	id int not null primary key auto_increment,
     id_categoria int,
     foreign key (id_categoria) references categoria (id),
-    nome_do_produto varchar(45),
+    produto varchar(45),
     descricao mediumtext,
     imagem_produto blob,
     preco float,
     quantidade int    
 );
 create table pedido(
-	id int not null primary key,
+	id int not null primary key auto_increment,
     cpf_cliente varchar(45),
     foreign key (cpf_cliente) references cliente (cpf),
     momento date,
     situacao varchar(45)
 );
 create table pedidoitens(
-	id int not null primary key,
+	id int not null primary key auto_increment,
     id_produto int,
     id_pedido int,
     foreign key (id_produto) references produto(id),
