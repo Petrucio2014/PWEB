@@ -115,5 +115,66 @@
 		}
 	}
 
+	class usuario{
+		private string $cpf;
+		private int $id_endereco;
+		private string $nome;
+		private string $e_mail;
+		private string $nome_usuario;
+		private string $senha;
+		private boolean $admin;
+
+		function usuario(string $cpf,int $id_endereco,string $nome,string $e_mail,string $nome_usuario,string $senha,boolean $admin)
+		{
+			$this->cpf = $cpf;
+			$this->id_endereco = $id_endereco;
+			$this->nome = $nome;
+			$this->e_mail = $e_amil;
+			$this->nome_usuario = $nome_usuario;
+			$this->senha = $senha;
+			$this->admin = $admin;
+		}
+
+	}
+
+	class endereco{
+		private int $id;
+		private int $id_bairro;
+
+		function endereco(int $id,int $id_bairro){
+			$this->id = $id;
+			$this->id_bairro = $id_bairro;
+		}
+	}
+
+	class bairro{
+		private int $id;
+		private int $id_cidade;
+		private string $bairro;
+
+		function bairro($id, $id_cidade, $bairro)
+		{
+			$this->id = $id;
+			$this->id_cidade = $id_cidade;
+			$this->id_bairro = $id_bairro;
+		}
+	}
+
+	class cidade{
+		private int $id;
+		private int $id_estado;
+		private string $cidade;
+
+		function cidade($id, $id_estado, $cidade){
+			$this->id = $id;
+			$this->id_estado = $id_estado;
+			$this->cidade = $cidade;
+
+		}
+	}
+
+
+
+
 
 ?>
